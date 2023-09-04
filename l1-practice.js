@@ -181,5 +181,3 @@ function removeDotsInString(string) {
 
 processBands(bands);
 */
-
-// 6)
