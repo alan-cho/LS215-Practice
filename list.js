@@ -133,3 +133,37 @@ substrings("abcde");
 */
 
 // 7)
+/*
+function substrings(string) {
+  let substrings = [];
+  for (let startIndex = 0; startIndex < string.length; startIndex += 1) {
+    let substring = string.substring(startIndex);
+    substrings = substrings.concat(leadingSubstrings(substring));
+  }
+
+  return substrings;
+}
+
+function leadingSubstrings(string) {
+  let substrings = [];
+  for (let length = 1; length <= string.length; length += 1) {
+    substrings.push(string.slice(0, length));
+  }
+
+  return substrings;
+}
+
+function isPalindrome(word) {
+  return word.length > 1 && word === word.split("").reverse().join("");
+}
+
+function palindromes(string) {
+  return substrings(string).filter(isPalindrome);
+}
+
+palindromes("abcd"); // []
+palindromes("madam"); // [ "madam", "ada" ]
+palindromes("hello-madam-did-madam-goodbye");
+*/
+
+// 8)
