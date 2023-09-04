@@ -44,7 +44,6 @@ let rectangles = [
 /*
 Write a function that processes the movie data.
 The function must return an array of objects that contain the ID and Title key-value pairs.
-*/
 function processReleaseData(data) {
   return data
     .filter((movie) => {
@@ -93,3 +92,25 @@ let newReleases = [
     bookmark: [{ id: 432534, time: 65876586 }],
   },
 ];
+*/
+
+// 3) Octal
+/*
+Write a function that peforms octal to decimal conversion.
+Given a string that represents an octal number, return a decimal representation of that same value.
+*/
+
+function octalToDecimal(numberString) {
+  let decimalParts = numberString.split("").map((digitChar, index) => {
+    return Number(digitChar) * Math.pow(8, numberString.length - index - 1);
+  });
+
+  return decimalParts.reduce((sum, number) => sum + number);
+}
+
+octalToDecimal("1"); // 1
+octalToDecimal("10"); // 8
+octalToDecimal("130"); // 88
+octalToDecimal("17"); // 15
+octalToDecimal("2047"); // 1063
+octalToDecimal("011"); // 9
