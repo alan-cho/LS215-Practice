@@ -98,8 +98,6 @@ let newReleases = [
 /*
 Write a function that peforms octal to decimal conversion.
 Given a string that represents an octal number, return a decimal representation of that same value.
-*/
-
 function octalToDecimal(numberString) {
   let decimalParts = numberString.split("").map((digitChar, index) => {
     return Number(digitChar) * Math.pow(8, numberString.length - index - 1);
@@ -114,3 +112,74 @@ octalToDecimal("130"); // 88
 octalToDecimal("17"); // 15
 octalToDecimal("2047"); // 1063
 octalToDecimal("011"); // 9
+*/
+
+// 4) Anagrams
+/*
+function anagram(word, list) {
+  return list.filter((candidate) => areAnagrams(candidate, word));
+}
+
+function areAnagrams(source, target) {
+  let sourceLetters = source.split("").sort();
+  let targetLetters = target.split("").sort();
+  return compareArrays(sourceLetters, targetLetters);
+}
+
+function compareArrays(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+
+  return array1.every((letter, index) => letter === array2[index]);
+}
+
+anagram("listen", ["enlists", "google", "inlets", "banana"]); // [ "inlets" ]
+anagram("listen", ["enlist", "google", "inlets", "banana"]); // [ "enlist", "inlets" ]
+*/
+
+// 5) Formatting Bands
+/*
+Change the bands' countries to 'Canada'.
+Capitalize the band name.
+Remove all dots from the band name.
+let bands = [
+  { name: "sunset rubdown", country: "UK", active: false },
+  { name: "women", country: "Germany", active: false },
+  { name: "a silver mt. zion", country: "Spain", active: true },
+];
+
+function processBands(bands) {
+  return bands.map((band) => {
+    let capitalizedName = capitalizePhrase(band.name);
+    let newBandName = removeDotsInString(capitalizedName);
+
+    return {
+      name: newBandName,
+      country: "Canada",
+      active: band.active,
+    };
+  });
+}
+
+function capitalizePhrase(phrase) {
+  return phrase
+    .split(" ")
+    .map((word) => capitalizeString(word))
+    .join(" ");
+}
+
+function capitalizeString(string) {
+  let initial = string[0].toUpperCase();
+  let rest = string.slice(1, string.length);
+  return initial + rest;
+}
+
+function removeDotsInString(string) {
+  return string.replace(/\./g, "");
+}
+
+processBands(bands);
+*/
+
+// 6)
