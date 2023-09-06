@@ -59,3 +59,23 @@ wordCap('this is a "quoted" word'); // 'This Is A "quoted" Word'
 */
 
 // 5)
+/*
+function swapCase(string) {
+  return string
+    .split("")
+    .map((char) => {
+      if (/[a-z]/.test(char)) {
+        return char.toUpperCase();
+      } else if (/[A-Z]/.test(char)) {
+        return char.toLowerCase();
+      } else {
+        return char;
+      }
+    })
+    .join("");
+}
+swapCase("CamelCase"); // "cAMELcASE"
+swapCase("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
+*/
+
+// 6)
