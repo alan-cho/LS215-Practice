@@ -79,3 +79,22 @@ swapCase("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
 */
 
 // 6)
+/*
+function staggeredCase(string) {
+  let newString = "";
+  for (let i = 0; i < string.length; i += 1) {
+    if (i % 2 !== 0) {
+      newString += string[i].toLowerCase();
+    } else {
+      newString += string[i].toUpperCase();
+    }
+  }
+  console.log(newString);
+}
+
+staggeredCase("I Love Launch School!"); // "I LoVe lAuNcH ScHoOl!"
+staggeredCase("ALL_CAPS"); // "AlL_CaPs"
+staggeredCase("ignore 77 the 4444 numbers"); // "IgNoRe 77 ThE 4444 nUmBeRs"
+*/
+
+// 7)
