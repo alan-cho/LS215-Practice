@@ -13,3 +13,15 @@ isUppercase(""); // true
 */
 
 // 2)
+/*
+function removeVowels(array) {
+  let newArray = array.map((word) => word.replace(/[aeiou]/gi, ""));
+  console.log(newArray);
+}
+
+removeVowels(["abcdefghijklmnopqrstuvwxyz"]); // ["bcdfghjklmnpqrstvwxyz"]
+removeVowels(["green", "YELLOW", "black", "white"]); // ["grn", "YLLW", "blck", "wht"]
+removeVowels(["ABC", "AEIOU", "XYZ"]); // ["BC", "", "XYZ"]
+*/
+
+// 3)
